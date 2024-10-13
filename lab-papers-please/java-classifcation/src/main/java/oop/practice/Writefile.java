@@ -12,19 +12,17 @@ public class Writefile {
     public Writefile(String path) throws IOException {
         Readfile readfile = new Readfile(path);
         this.data = readfile.getdata();
+
     }
 
-    public void saveDataToFile() throws IOException {
+    public void saveDataToFile(Universe[] universes) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        Classification classification = new Classification();
-        Universe[] universes = classification.test();
 
         Universe starWars = universes[0];
         Universe hitchhikers = universes[1];
         Universe marvel = universes[2];
         Universe rings = universes[3];
 
-        // Создаем отдельные файлы для каждого набора данных
         mapper.writeValue(new File("./lab-papers-please/output/starwars.json"), starWars);
         mapper.writeValue(new File("./lab-papers-please/output/hitchhiker.json"), hitchhikers);
         mapper.writeValue(new File("./lab-papers-please/output/rings.json"), marvel);

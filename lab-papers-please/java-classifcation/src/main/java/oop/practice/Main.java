@@ -14,9 +14,12 @@ public class Main {
 
   public static void main(String[] args) throws IOException {
     var path = "./lab-papers-please/java-classifcation/src/main/resources/input.json";
+
+    Classification classification = new Classification();
+    Universe[] universes = classification.test();
     Writefile witefile = new Writefile(path);
     witefile.printData();
-    witefile.saveDataToFile();
+    witefile.saveDataToFile(universes);
   }
 }
 
