@@ -3,7 +3,7 @@ package program_arguments;
 import java.util.StringTokenizer;
 
 public class TextData {
-    // Attributes
+
     private String fileName;
     private String text;
     private int numberOfVowels;
@@ -12,7 +12,6 @@ public class TextData {
     private int numberOfSentences;
     private String longestWord;
 
-    // Constructor that processes the text
     public TextData(String text, String fileName) {
         this.text = text;
         this.fileName = fileName;
@@ -23,7 +22,6 @@ public class TextData {
         this.longestWord = findLongestWord();
     }
 
-    // Method to count vowels in the text
     private int countVowels() {
         int vowelsCount = 0;
         for (char c : text.toLowerCase().toCharArray()) {
@@ -34,7 +32,6 @@ public class TextData {
         return vowelsCount;
     }
 
-    // Method to count consonants in the text
     private int countConsonants() {
         int consonantsCount = 0;
         for (char c : text.toLowerCase().toCharArray()) {
@@ -45,7 +42,6 @@ public class TextData {
         return consonantsCount;
     }
 
-    // Method to count sentences in the text (using '.', '!', or '?')
     private int countSentences() {
         int sentenceCount = 0;
         for (char c : text.toCharArray()) {
@@ -56,7 +52,7 @@ public class TextData {
         return sentenceCount;
     }
 
-    // Method to find the longest word in the text
+    // Method to find the longest word
     private String findLongestWord() {
         StringTokenizer tokenizer = new StringTokenizer(text, " \t\n\r.,!?;:");
         String longest = "";
@@ -69,12 +65,25 @@ public class TextData {
         return longest;
     }
 
-    // Getters
-    public String getFilename() { return fileName; }
-    public String getText() { return text; }
-    public int getNumberOfVowels() { return numberOfVowels; }
-    public int getNumberOfConsonants() { return numberOfConsonants; }
-    public int getNumberOfLetters() { return numberOfLetters; }
-    public int getNumberOfSentences() { return numberOfSentences; }
-    public String getLongestWord() { return longestWord; }
+    public String getFilename() {
+        return fileName;
+    }
+    public String getText() {
+        return text;
+    }
+    public int getNumberOfVowels() {
+        return numberOfVowels;
+    }
+    public int getNumberOfConsonants() {
+        return numberOfConsonants;
+    }
+    public int getNumberOfLetters() {
+        return numberOfLetters;
+    }
+    public int getNumberOfSentences() {
+        return numberOfSentences;
+    }
+    public String getLongestWord() {
+        return longestWord;
+    }
 }

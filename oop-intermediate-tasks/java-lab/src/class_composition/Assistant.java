@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Assistant {
-    private String assistantName;
     private List<Display> assignedDisplays;
 
     public Assistant() {

@@ -5,7 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class FileReader {
-    // Method to read a file and return its contents as a String
+
+    // Method to read a file and return its contents
     public String readFileIntoString(String path) throws IOException {
         return new String(Files.readAllBytes(Paths.get(path)));
     }
