@@ -65,4 +65,8 @@ public class Display {
         System.out.println("Model: " + model + ", width: " + width + ", height: " + height + ", ppi: " + ppi);
     }
 
+    @Override
+    public String toString() {
+        return this.model;
+    }
 }
