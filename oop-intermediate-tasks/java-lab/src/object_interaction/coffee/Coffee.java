@@ -1,10 +1,11 @@
-package object_interaction;
+package object_interaction.coffee;
 
-public class Coffee {
+// Package-private class (no public modifier)
+abstract class Coffee {
     protected Intensity coffeeIntensity;
     protected final String name = "Coffee";
 
-    public Coffee(Intensity coffeeIntensity) {
+    Coffee(Intensity coffeeIntensity) {
         this.coffeeIntensity = coffeeIntensity;
     }
 
@@ -20,12 +21,11 @@ public class Coffee {
         return name;
     }
 
-    // Removed 'final' to allow overriding
     public void printDetails() {
         System.out.println("Coffee intensity: " + coffeeIntensity);
     }
 
-    public Coffee makeCoffee() {
+    Coffee makeCoffee() {
         System.out.println("Making " + name);
         printDetails();
         return this;

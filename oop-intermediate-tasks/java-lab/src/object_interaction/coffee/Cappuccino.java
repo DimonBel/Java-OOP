@@ -1,4 +1,4 @@
-package object_interaction;
+package object_interaction.coffee;
 
 public class Cappuccino extends Coffee {
     protected int mlOfMilk;

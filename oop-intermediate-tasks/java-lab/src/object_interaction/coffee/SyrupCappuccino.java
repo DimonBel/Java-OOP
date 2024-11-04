@@ -1,4 +1,4 @@
-package object_interaction;
+package object_interaction.coffee;
 
 public class SyrupCappuccino extends Cappuccino {
     private SyrupType syrup;

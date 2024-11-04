@@ -1,4 +1,4 @@
-package object_interaction;
+package object_interaction.coffee;
 
 public class PumpkinSpiceLatte extends Cappuccino {
     private int mgOfPumpkinSpice;
