@@ -14,4 +14,11 @@ public class Americano extends Coffee {
         super.printDetails();
         System.out.println("Americano water: " + mlOfWater + " ml");
     }
+
+    public Americano makeAmericano() {
+        System.out.println("Making Americano");
+        super.printDetails();
+        System.out.println("Adding " + mlOfWater + " ml of water");
+        return this;
+    }
 }

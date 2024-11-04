@@ -20,7 +20,14 @@ public class Coffee {
         return name;
     }
 
+    // Removed 'final' to allow overriding
     public void printDetails() {
         System.out.println("Coffee intensity: " + coffeeIntensity);
+    }
+
+    public Coffee makeCoffee() {
+        System.out.println("Making " + name);
+        printDetails();
+        return this;
     }
 }

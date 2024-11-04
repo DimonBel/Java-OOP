@@ -14,4 +14,12 @@ public class SyrupCappuccino extends Cappuccino {
         super.printDetails();
         System.out.println("Syrup type: " + syrup);
     }
+
+    public SyrupCappuccino makeSyrupCappuccino() {
+        System.out.println("Making Syrup Cappuccino");
+        super.printDetails();
+        System.out.println("Adding " + mlOfMilk + " mls of milk");
+        System.out.println("Adding syrup: " + syrup);
+        return this;
+    }
 }
