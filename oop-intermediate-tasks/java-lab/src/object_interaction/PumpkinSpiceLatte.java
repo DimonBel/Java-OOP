@@ -9,15 +9,11 @@ public class PumpkinSpiceLatte extends Cappuccino {
         this.mgOfPumpkinSpice = mgOfPumpkinSpice;
     }
 
-    public int getMgOfPumpkinSpice() {
-        return mgOfPumpkinSpice;
-    }
-
-    public void setMgOfPumpkinSpice(int mgOfPumpkinSpice) {
-        this.mgOfPumpkinSpice = mgOfPumpkinSpice;
-    }
-
-    public String getName() {
-        return name;
+    @Override
+    public void printDetails() {
+        System.out.println("Making Pumpkin Spice Latte");
+        super.printDetails();
+        System.out.println("Adding " + mlOfMilk + " mls of milk");
+        System.out.println("Adding " + mgOfPumpkinSpice + " mls of pumpkin spice");
     }
 }

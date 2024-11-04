@@ -9,15 +9,9 @@ public class SyrupCappuccino extends Cappuccino {
         this.syrup = syrup;
     }
 
-    public SyrupType getSyrup() {
-        return syrup;
-    }
-
-    public void setSyrup(SyrupType syrup) {
-        this.syrup = syrup;
-    }
-
-    public String getCoffee() {
-        return coffee;
+    @Override
+    public void printDetails() {
+        super.printDetails();
+        System.out.println("Syrup type: " + syrup);
     }
 }

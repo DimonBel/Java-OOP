@@ -9,15 +9,9 @@ public class Cappuccino extends Coffee {
         this.mlOfMilk = mlOfMilk;
     }
 
-    public int getMlOfMilk() {
-        return mlOfMilk;
-    }
-
-    public void setMlOfMilk(int mlOfMilk) {
-        this.mlOfMilk = mlOfMilk;
-    }
-
-    public String getCoffee() {
-        return coffee;
+    @Override
+    public void printDetails() {
+        super.printDetails();
+        System.out.println("Cappuccino milk: " + mlOfMilk + " mg");
     }
 }

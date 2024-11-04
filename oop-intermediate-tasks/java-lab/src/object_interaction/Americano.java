@@ -9,15 +9,9 @@ public class Americano extends Coffee {
         this.mlOfWater = mlOfWater;
     }
 
-    public int getMlOfWater() {
-        return mlOfWater;
-    }
-
-    public void setMlOfWater(int mlOfWater) {
-        this.mlOfWater = mlOfWater;
-    }
-
-    public String getCoffeeName() {
-        return coffeeName;
+    @Override
+    public void printDetails() {
+        super.printDetails();
+        System.out.println("Americano water: " + mlOfWater + " ml");
     }
 }
